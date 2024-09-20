@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#F4E7E7"
     android:orientation="vertical"
     android:padding="4dp">
 
@@ -12,10 +13,10 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:layout_gravity="center"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        app:cardCornerRadius="10dp"
-        android:layout_gravity="center">
+        app:cardCornerRadius="10dp">
 
         <ImageView
             android:id="@+id/imageViewFile"
@@ -28,80 +29,90 @@
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:padding="2dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
         <TextView
             android:id="@+id/txtProductName"
-            android:layout_width="300dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit"
             android:text="กางแกงขายาว"
+            android:textAlignment="center"
             android:textSize="22sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/edit1"
             android:text="$200"
-            android:textSize="18sp" />
+            android:textAlignment="center"
+            android:textSize="22dp" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/txtProductDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="สีขาว ผ้ายืด ขนาด M"
-        android:textSize="18sp" />
+
+        android:textSize="22sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnRemoveProduct"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            app:backgroundTint="#f2f2f2"
-            android:background ="@drawable/button"
-            android:textColor="#4800ff"
+            android:background="@drawable/button_cart"
+            android:text="-"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:text="-" />
+            app:backgroundTint="#476FBD" />
 
         <EditText
             android:id="@+id/editQuantity"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textAlignment="center"
             android:background="@null"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:text="1" />
+            android:inputType="number"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnAddProduct"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            app:backgroundTint="#f2f2f2"
-            android:background ="@drawable/button_cart"
-            android:textColor="#4800ff"
+            android:background="@drawable/button_cart"
+            android:text="+"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:text="+" />
+            app:backgroundTint="#476FBD" />
     </LinearLayout>
+
     <Button
         android:id="@+id/btnAddToCart"
-        android:layout_width="match_parent"
+        android:layout_width="392dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="5dp"
+        android:background="@drawable/button_cart"
         android:text="เพิ่มไปยังตะกร้า"
+        android:textAlignment="center"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:background ="@drawable/button_cart"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
